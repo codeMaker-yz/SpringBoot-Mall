@@ -56,7 +56,34 @@ SpringBoot版本要和SpringCloud版本对应
 跨域流程：对于非简单请求，会先发送一个预检OPTIONS请求进行探测，等待服务器响应是否允许跨域，
 如果允许，浏览器才能发送真实请求。
 
-解决跨域：1.使用nginx部署为同一域
-        2.服务器允许当次请求跨域
-        
+解决跨域：
+
+1.使用nginx部署为同一域
+
+
+2.服务器允许当次请求跨域
+
+
+mybatis逻辑删除:
+
+配置全局的逻辑删除规则
+
+实体类字段加上@TableLogic注解
+
+使用阿里云oss完成对象存储
+
+1. 引入oss-starter
+2. 配置key、endpoint等信息
+3. 使用OSSClient进行相关操作
+
+
+后端校验流程：
+
+给bean添加校验注解，并定义message提示
+
+开启校验功能@Valid，校验错误后会有默认的响应
+
+给校验的bean后紧跟一个BindingResult，
+
+
 

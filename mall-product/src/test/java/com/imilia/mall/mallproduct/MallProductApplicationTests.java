@@ -1,17 +1,19 @@
 package com.imilia.mall.mallproduct;
 
-import com.imilia.mall.product.entity.BrandEntity;
-import com.imilia.mall.product.service.BrandService;
+
+
+import com.imilia.mall.product.MallProductApplication;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@SpringBootTest
+
+
+@SpringBootTest(classes = MallProductApplication.class)
 @RunWith(SpringRunner.class)
 class MallProductApplicationTests {
-
 
 
     @Test

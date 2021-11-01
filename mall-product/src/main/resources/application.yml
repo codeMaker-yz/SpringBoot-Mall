@@ -6,14 +6,27 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
-      server-addr: 127.0.0.1:8848
-  application:
-    name: mall-product
+      discovery:
+        server-addr: 127.0.0.1:8848
+    alicloud:
+      access-key: LTAI5tRTkBGWhqoxkdnre5Qb
+      secret-key: 1AiuuTmW4ZNSsKQmyUJrM7wB2dwKWl
+      oss:
+        endpoint: oss-cn-hangzhou.aliyuncs.com
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/**/*.xml
   global-config:
     db-config:
       id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
 server:
   port: 10005
+
+logging:
+  level:
+    com.imilia.mall.product: DEBUG
+
+

@@ -2,6 +2,7 @@ package com.imilia.mall.product.service.impl;
 
 import org.springframework.stereotype.Service;
 
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -44,6 +45,12 @@ public class CategoryServiceImpl extends ServiceImpl<CategoryDao, CategoryEntity
                 }).sorted(Comparator.comparingInt(menu -> (menu.getSort() == null ? 0 : menu.getSort())))
                 .collect(Collectors.toList());
         return levelMenus;
+    }
+
+    @Override
+    public void removeMenuByIds(Long[] catIds) {
+        //TODO
+        baseMapper.deleteBatchIds(Arrays.asList(catIds));
     }
 
     private List<CategoryEntity> getChildren(CategoryEntity root, List<CategoryEntity> all) {
