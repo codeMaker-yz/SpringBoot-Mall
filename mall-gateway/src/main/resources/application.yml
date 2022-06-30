@@ -31,8 +31,6 @@ spring:
 
 
 
-
-
 ## 前端项目，/api
 ## http://localhost:88/api/captcha.jpg -> http://localhost:8080/renren-fast/captcha.jpg
 
